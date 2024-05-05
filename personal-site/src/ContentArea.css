@@ -1,0 +1,7 @@
+.content-area {
+    padding: 20px;
+    color: black;
+    background-color: white;
+    min-height: 200px; /* Ensures the content area has a minimum height */
+  }
+  

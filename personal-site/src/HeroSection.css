@@ -1,0 +1,54 @@
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center; /* Ensures that all text is centered */
+    background-size: cover;
+    background-position: center; /* Ensures the background image is centered */
+    padding: 20px; /* Adds padding to prevent content from touching the edges */
+  }
+  
+  .hero-section h1 {
+    margin-bottom: 0.5em; /* Adds a little space below the header */
+  }
+  
+  .hero-section p {
+    margin-bottom: 1em; /* Adds space below the paragraph */
+  }
+  
+  .tabs {
+    margin-top: 20px; /* Adds space above the tabs */
+  }
+  
+  .tabs button {
+    padding: 10px 20px; /* Pads the buttons for better touch */
+    margin: 0 10px; /* Spaces out the buttons */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for buttons */
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .tabs button:hover {
+    background: rgba(0, 0, 0, 0.7); /* Darkens button on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: 10px;
+      text-align: left; /* Or keep centered based on your design preference */
+    }
+  
+    .hero-section h1 {
+      font-size: 1.5em; /* Smaller font size for smaller devices */
+    }
+  
+    .tabs button {
+      padding: 8px 16px; /* Smaller padding for smaller devices */
+    }
+  }
+  
