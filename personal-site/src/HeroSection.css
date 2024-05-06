@@ -1,54 +1,66 @@
+/* Styles for the entire hero section */
 .hero-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
-    text-align: center; /* Ensures that all text is centered */
-    background-size: cover;
-    background-position: center; /* Ensures the background image is centered */
-    padding: 20px; /* Adds padding to prevent content from touching the edges */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for background image and opacity */
+}
+
+/* Styles specifically for the text content within the hero section */
+.text-content {
+  transition: opacity 0.5s ease-in-out; /* Transition for text content opacity */
+  opacity: 1; /* Start with full opacity */
+  padding: 20px; /* Padding to prevent text from touching the edges */
+  max-width: 80%; /* Limiting text width for better readability */
+  box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+/* Styles for the tabs beneath the text content */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Space above the tab buttons */
+}
+
+/* General button styles within the hero section */
+.tabs button {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  border: 2px solid white; /* White border around the buttons */
+  color: white; /* White text color for readability */
+  font-size: 16px; /* Font size for the text inside buttons */
+  margin: 0 10px; /* Horizontal spacing between buttons */
+  padding: 10px 20px; /* Padding inside the buttons */
+  cursor: pointer; /* Cursor indicates the button is clickable */
+  transition: background-color 0.3s, transform 0.3s; /* Transition for background color and transform on hover */
+}
+
+/* Hover effects for buttons to improve interactivity */
+.tabs button:hover {
+  background: rgba(255, 255, 255, 0.2); /* Lighten background on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  outline: none; /* Remove outline when button is focused */
+}
+
+/* Ensure buttons are not focused with a blue outline (common in browsers) */
+.tabs button:focus {
+  outline: none;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero-section h1, .hero-section p {
+    padding: 0 20px; /* Padding on sides for smaller screens */
+    font-size: smaller; /* Smaller font size on smaller devices */
   }
-  
-  .hero-section h1 {
-    margin-bottom: 0.5em; /* Adds a little space below the header */
-  }
-  
-  .hero-section p {
-    margin-bottom: 1em; /* Adds space below the paragraph */
-  }
-  
-  .tabs {
-    margin-top: 20px; /* Adds space above the tabs */
-  }
-  
+
   .tabs button {
-    padding: 10px 20px; /* Pads the buttons for better touch */
-    margin: 0 10px; /* Spaces out the buttons */
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for buttons */
-    border: none;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
+    font-size: smaller; /* Smaller font size for buttons on smaller screens */
+    padding: 8px 16px; /* Smaller padding for smaller devices */
   }
-  
-  .tabs button:hover {
-    background: rgba(0, 0, 0, 0.7); /* Darkens button on hover */
-  }
-  
-  @media (max-width: 768px) {
-    .hero-section {
-      padding: 10px;
-      text-align: left; /* Or keep centered based on your design preference */
-    }
-  
-    .hero-section h1 {
-      font-size: 1.5em; /* Smaller font size for smaller devices */
-    }
-  
-    .tabs button {
-      padding: 8px 16px; /* Smaller padding for smaller devices */
-    }
-  }
-  
+}
